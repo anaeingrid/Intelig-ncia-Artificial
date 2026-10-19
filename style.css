@@ -1,0 +1,81 @@
+:root {
+    --cor-fundo: #090d16;
+    --cor-principal: #131b2e;
+    --cor-secundaria: #1e2942;
+    --cor-destaque: #00f2fe;
+    --cor-texto: #e2e8f0;
+    --cor-hover: #4facfe;
+}
+
+body {
+    background: linear-gradient(135deg, #090d16 0%, #1a102f 100%);
+    color: var(--cor-texto);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.caixa-principal {
+    background: rgba(19, 27, 46, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    color: var(--cor-destaque);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+}
+
+.texto-introdutorio {
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+.caixa-perguntas, 
+.caixa-alternativas, 
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-perguntas.mostrar, 
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.caixa-alternativas.mostrar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+button {
+    background: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, var(--cor-destaque), var(--cor-hover));
+    color: #090d16;
+    font-weight: bold;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+}
